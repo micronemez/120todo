@@ -19,23 +19,21 @@ end
 desc "Generate and publish blog to gh-pages"
 task :publish => [:generate] do
 
-  if confirm == 'y'
-    Dir.mktmpdir do |tmp|
-      system "cp -R _site/* #{tmp}"
-      system "git checkout gh-pages"
-      puts 'make sure branch checked out successfully, y to continue: '
-      confirm2 = $stdin.gets.chomp
-      if confirm2
-        system "rm -rf *"
-        system "mv #{tmp}/* ."
-        message = "Site updated at #{Time.now.utc}"
-        system "git add ."
-        system "git commit -am #{message.shellescape}"
-        system "git push origin gh-pages"
-        system "git checkout master"
-        system "echo yolo"
-      end
+  Dir.mktmpdir do |tmp|
+    system "cp -R _site/* #{tmp}"
+    system "git checkout gh-pages"
+    puts 'make sure branch checked out successfully, y to continue: '
+    confirm2 = $stdin.gets.chomp
+    if confirm2
+      system "rm -rf *"
+      system "mv #{tmp}/* ."
+      message = "Site updated at #{Time.now.utc}"
+      system "git add ."
+      system "git commit -am #{message.shellescape}"
+      system "git push origin gh-pages"
+      system "git checkout master"
+      system "echo yolo"
     end
-end
+  end
 
-task :default => :publish
+end
