@@ -22,9 +22,9 @@ task :publish => [:generate] do
   Dir.mktmpdir do |tmp|
     system "cp -R _site/* #{tmp}"
     system "git checkout gh-pages"
-    puts 'make sure branch checked out successfully, y to continue: '
+    puts 'make sure gh-pages branch can be checked out successfully (are there errors above?), y to continue: '
     confirm2 = $stdin.gets.chomp
-    if confirm2
+    if confirm2 == 'y'
       system "rm -rf *"
       system "mv #{tmp}/* ."
       message = "Site updated at #{Time.now.utc}"
