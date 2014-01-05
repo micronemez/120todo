@@ -3,4 +3,3 @@ markdown: redcarpet
 pygments: true
 safe: true
 lsi: false
-exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'params.json']
