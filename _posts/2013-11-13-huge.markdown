@@ -1,0 +1,22 @@
+---
+layout: huge
+title:  "huge"
+date:   2013-11-13 1:38:08
+categories: flow kaltura
+---
+
+<div id="content">
+
+<div id="huge_video" class="flowplayer is-splash">
+   <video>
+   <source type="video/webm"
+           src="https://s3-us-west-2.amazonaws.com/micronemezfdt/kaltura/20131112/0/0_0fuqowv8_0_r84a2m4w_1.webm">
+   <source type="video/mp4"
+           src="https://s3-us-west-2.amazonaws.com/micronemezfdt/kaltura/20131112/0/0_0fuqowv8_0_2f6uf7pi_1.mp4">
+   <source type="video/ogg"
+           src="https://s3-us-west-2.amazonaws.com/micronemezfdt/kaltura/20131112/0/0_f91fj04j_0_9xl3ne9p_1.ogg">
+   <source type="video/flash"
+           src="mp4:micronemezfdt/kaltura/20131112/0/0_0fuqowv8_0_2f6uf7pi_1.mp4"></video>
+</div>
+
+</div>
